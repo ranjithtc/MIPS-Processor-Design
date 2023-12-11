@@ -1,0 +1,15 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.all; 
+use IEEE.NUMERIC_STD.ALL;
+
+
+-- sign extension
+entity signext is
+port(s_in : in std_logic_vector(15 downto 0);
+s_out : out std_logic_vector(31 downto 0));
+end signext;
+
+architecture signext_arch of signext is
+begin
+s_out <= X"0000"&s_in when(s_in(15) = '0') else X"FFFF"&s_in;
+end signext_arch;

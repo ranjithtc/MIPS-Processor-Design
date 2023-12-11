@@ -1,0 +1,16 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.all; 
+use IEEE.NUMERIC_STD.ALL;
+
+
+entity pc_plus4_adder is
+port ( a,b : in std_logic_vector(31 downto 0);
+		 c : out std_logic_vector(31 downto 0));
+end pc_plus4_adder;
+
+
+-- Architecture of pc_plus4_adder
+architecture pc_plus4_adder_arch of pc_plus4_adder is
+begin
+c <= std_logic_vector(unsigned(a)+ unsigned(b));
+end pc_plus4_adder_arch;

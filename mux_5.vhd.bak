@@ -1,0 +1,16 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.all; 
+use IEEE.NUMERIC_STD.ALL;
+
+-- mux_5 is the input to mux_1
+entity mux_5 is 
+port(a, b: in STD_LOGIC_VECTOR (31 downto 0);
+selector: in STD_LOGIC;
+c: out STD_LOGIC_VECTOR (31 downto 0));
+end mux_5;
+
+-- Architecture of mux_5
+architecture mux_5_arch of mux_5 is
+begin
+c <= a when (selector = '0') else b;
+end mux_5_arch;

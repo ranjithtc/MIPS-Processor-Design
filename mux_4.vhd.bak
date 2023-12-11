@@ -1,0 +1,17 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.all; 
+use IEEE.NUMERIC_STD.ALL;
+
+
+-- mux_4
+entity mux_4 is 
+port(a, b: in STD_LOGIC_VECTOR (31 downto 0);
+selector: in STD_LOGIC;
+c: out STD_LOGIC_VECTOR (31 downto 0));
+end mux_4;
+
+-- Architecture of mux_4
+architecture mux_4_arch of mux_4 is
+begin
+c <= a when (selector = '0') else b;
+end mux_4_arch;

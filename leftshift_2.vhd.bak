@@ -1,0 +1,15 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.all; 
+use IEEE.NUMERIC_STD.ALL;
+
+
+-- left shift by 2 block 2
+entity leftshift_2 is
+port(a: in STD_LOGIC_VECTOR (31 downto 0);
+b: out STD_LOGIC_VECTOR (31 downto 0));
+end leftshift_2;
+
+architecture leftshift_2_arch of leftshift_2 is
+begin
+b <= a sll X"2";
+end leftshift_2_arch; 
